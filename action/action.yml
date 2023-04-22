@@ -1,0 +1,11 @@
+name: PSR-4 Linting
+description: This action runs the PSR-4 Linter on your codebase.
+inputs:
+  path:
+    description: 'The path to the directory you want to lint.'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
